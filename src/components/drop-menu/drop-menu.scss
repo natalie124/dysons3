@@ -1,0 +1,100 @@
+.drop-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+
+  width: 600px;
+  padding: 40px 40px 15px;
+
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 0 50px 0 rgba(29, 33, 36, 0.15);
+
+  animation: fadein 0.3s ease-out;
+
+  @media(max-width: $tablet) {
+    width: 550px;
+    padding: 40px 40px 10px;
+  }
+
+  &__list {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    &::after {
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      z-index: 100;
+
+      width: 100%;
+      height: 10px;
+
+      background-color: $white;
+
+      content: "";
+    }
+  }
+
+  &__item {
+    width: 45%;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid $grey-7;
+
+    &:nth-child(odd) {
+      margin-right: 10%;
+    }
+
+    @media (max-width: $tablet) {
+      width: 45%;
+
+      &:nth-child(odd) {
+        margin-right: 10%;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    vertical-align: baseline;
+
+    width: 100%;
+    padding-bottom: 15px;
+
+    @include font-m(15px, 1.2, $grey-1);
+    text-decoration: none;
+    letter-spacing: 0.01em;
+
+    transition-property: color, opacity;
+    transition-duration: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $fuchsia;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+

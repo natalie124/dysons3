@@ -1,0 +1,31 @@
+extends pug/layout
+
+block variables
+  -let title = "Уход за волосами";
+
+block content
+  .pagination
+    .container
+      ul.pagination__list
+        li.pagination__item
+          a.pagination__link(href="main.html") Магазин
+        li.pagination__item
+          a.pagination__link(href="#") Каталог
+        li.pagination__item
+          a.pagination__link(href="catalog.html") Уход за волосами
+
+  main
+    include components/product/product
+    section.advantages.advantages--grey
+      .container
+        h2.visually-hidden Преимущества
+        ul.advantages__list
+          li.advantages__item
+            +svg("cube", 48, 46)
+            p Доставка по Москве за 2 часа
+          li.advantages__item
+            +svg("cube", 48, 46)
+            p Доставка по России за 2-3 дня
+          li.advantages__item
+            +svg("shild", 40, 49)
+            p Гарантия на продукцию 2 года

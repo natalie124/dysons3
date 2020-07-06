@@ -1,0 +1,129 @@
+.button-arrow {
+  position: relative;
+
+  width: 68px;
+  height: 68px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #cecece;
+  border: none;
+
+  transition-property: background-color;
+  transition-duration: 0.3s;
+
+  cursor: pointer;
+  outline: none;
+
+  @media (max-width: $tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
+  &::before {
+    position: absolute;
+    top: calc(50% - 13px);
+
+    width: 26px;
+    height: 26px;
+
+    background-color: transparent;
+    border-top: 2px solid $white;
+    border-right: 2px solid $white;
+
+    transition-property: border-color;
+    transition-duration: 0.3s;
+
+    content: "";
+  }
+
+  &--next {
+    &::before {
+      right: calc(50% - 7px);
+
+      transform: rotate(45deg);
+    }
+  }
+
+  &--prev {
+    &::before {
+      left: calc(50% - 7px);
+
+      transform: rotate(-135deg);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $black-7;
+  }
+}
+
+.button-close {
+  position: relative;
+  z-index: 10;
+
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  transition-property: opacity;
+  transition-duration: 0.3s;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+
+    &:before,
+    &:after {
+      background-color: $black;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 3px);
+
+    width: 2px;
+    height: 20px;
+
+    background-color: $grey-16;
+
+    transform: rotate(45deg);
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 3px);
+
+    width: 2px;
+    height: 20px;
+
+    background-color: $grey-16;
+
+    transform: rotate(-45deg);
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+
+    content: "";
+  }
+}

@@ -1,0 +1,20 @@
+.product-description {
+  width: 100%;
+  margin-bottom: 40px;
+
+  &__title {
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0;
+
+    @include font-m(14px, 1.2, $black-3);
+  }
+
+  &__text {
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 0;
+
+    @include font-r(14px, 1.2, $grey-11);
+  }
+}

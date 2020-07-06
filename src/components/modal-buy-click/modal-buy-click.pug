@@ -1,0 +1,23 @@
+section.modal.modal-buy-click.js-modal-buy-click.js-modal.js-hide
+  .modal__wrapper.modal-buy-click__wrapper
+    button.modal__close.button-close.js-close-btn(type="button" title="Закрыть" tabindex="1")
+    .modal__container.modal-buy-click__container
+      .modal__content.modal-buy-click__content
+        h2.modal-buy-click__title Фен Dyson Supersonic для волос
+        .modal-buy-click__img
+          +picture-png-webp("modal-item", 201, 417, "Фен Dyson Supersonic для волос")
+        .modal-buy-click__info
+          form
+            .input-item
+              label(for="modal-buy-click-name") Ваше имя
+              input(type="text" name="name" id="modal-buy-click-name" required)
+            .input-item
+              label(for="modal-buy-click-phone") Телефон
+              input(type="tel" name="phone" id="modal-buy-click-phone" required)
+            .input-item
+              label(for="modal-buy-click-address") Адрес
+              input(type="text" name="name" id="modal-buy-click-address" required)
+            p.modal-buy-click__price <span>31 990</span> ₽
+            button.modal-buy-click__btn(type="submit")
+              +img-png( "cursor", 19, 21, "Купить в 1 клик" )
+              | Купить в 1 клик

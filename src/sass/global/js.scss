@@ -1,0 +1,105 @@
+.js-tabs-content.active {
+  display: block !important;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.js-cart-favourites.active {
+  svg {
+    fill: $fuchsia;
+  }
+}
+
+.js-hide {
+  display: none;
+}
+
+.js-left {
+  left: 0;
+}
+
+.js-right {
+  right: 0;
+}
+
+.js-drop-item {
+
+  @media (max-width: $mobile) {
+    position: relative;
+    padding-right: 35px;
+
+    &::before {
+      position: absolute;
+      right: 11px;
+      top: 17px;
+      z-index: 10;
+
+      display: block;
+
+      width: 10px;
+      height: 10px;
+
+      background-color: transparent;
+      border-bottom: 2px solid #888787;
+      border-left: 2px solid #888787;
+
+      transform: rotate(-45deg);
+
+      transition-property: all;
+      transition-duration: 0.3s;
+
+      content: "";
+    }
+
+    &--open::before {
+      top: 19px;
+      transform: rotate(135deg) translateX(4px);
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    display: none;
+
+    width: 100%;
+    height: 30px;
+
+    content: "";
+  }
+  &:hover {
+    &::after {
+      display: block;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+.js-hidden {
+  display: none;
+  opacity: 0;
+}
+
+.js-show-btn-active {
+  &::before,
+  &::after {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+.js-show-item {
+  opacity: 1;
+
+  animation: fadein 0.6s ease-out;
+}
+

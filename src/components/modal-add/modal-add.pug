@@ -1,0 +1,15 @@
+section.modal.modal-add.js-modal-add.js-modal.js-hide
+  .modal__wrapper.modal-add__wrapper
+    button.modal__close.button-close.js-close-btn(type="button" title="Закрыть" tabindex="1")
+    .modal__container.modal-add__container
+      .modal__content.modal-add__content
+        h2.modal-add__title Товар добавлен в корзину
+        .modal-add__img
+          +picture-png-webp("modal-item", 201, 417, "Фен Dyson Supersonic для волос")
+        .modal-add__info
+          p.modal-add__name Фен Dyson Supersonic для волос
+          p.modal-add__price <span>31 990</span> ₽
+          a.modal-add__btn(href="cart.html")
+            +svg("box", 22, 25)
+            | Оформить заказ
+          button.modal-add__btn.js-close-btn.modal-add__btn--close(type="button") Продолжить покупки

@@ -1,0 +1,139 @@
+.catalog {
+  width: 100%;
+  margin-bottom: 45px;
+
+  background-color: $white-6;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    padding: 0 15px 60px 40px;
+
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+
+    @include font-b(48px, 1.2, $black-4);
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+      padding-left: 15px;
+
+      font-size: 36px;
+    }
+  }
+
+  &__filters {
+
+    @media (max-width: $mobile) {
+      padding-left: 5px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__select {
+    position: relative;
+
+    background-color: $white;
+
+    &::after {
+      position: absolute;
+      top: 13px;
+      right: 16px;
+      z-index: 0;
+
+      width: 10px;
+      height: 10px;
+      margin-left: 30px;
+
+      border-top: solid 2px $grey-9;
+      border-right: solid 2px $grey-9;
+
+      transform: rotate(135deg);
+
+      content: "";
+    }
+
+    select {
+      padding: 14px 38px 14px 20px;
+
+      @include font-r(14px, 14px, $grey-8);
+      letter-spacing: 0.005em;
+
+      border: none;
+      background-color: transparent;
+
+      transition-property: color;
+      transition-duration: 0.3s;
+
+      appearance: none;
+      cursor: pointer;
+
+      &::-ms-expand {
+        display: none;
+      }
+
+      &:hover,
+      &:focus {
+        color: $black;
+      }
+    }
+  }
+
+  &__show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 0 100px;
+
+    @media (max-width: $mobile) {
+      padding-top: 0;
+      padding-bottom: 24px;
+    }
+
+    button {
+      margin: 0;
+      padding: 20px 53px;
+
+      @include font-sb(19px, 1.2, $white);
+
+      border: none;
+      border-radius: 2px;
+      background-color: #191919;
+
+      animation: none;
+
+      transition-property: opacity;
+      transition-duration: 0.3s;
+
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        animation: linear 1.2s light infinite;
+      }
+
+      &:active {
+        opacity: 0.5;
+        animation: none;
+      }
+    }
+  }
+}

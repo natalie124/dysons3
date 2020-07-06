@@ -1,0 +1,106 @@
+.quantity-block {
+  position: relative;
+
+  width: 87px;
+  height: 27px;
+
+  background-color: $white;
+
+  &__btn {
+  position: absolute;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+
+  width: 27px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: $white-8;
+  border: none;
+
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 9px;
+
+    width: 10px;
+    height: 10px;
+
+    border-top: 2px solid $grey-15;
+    border-left: 2px solid $grey-15;
+    opacity: 0.2;
+
+    transition-property: border-color;
+    transition-duration: 0.3s;
+
+    content: "";
+  }
+
+  &--plus {
+    right: 0;
+    justify-content: flex-start;
+
+    &::before {
+      right: 10px;
+      transform: rotate(135deg);
+    }
+  }
+
+  &--minus {
+    justify-content: flex-end;
+
+    &::before {
+      left: 10px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-color: $black;
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+  }
+  }
+
+  input {
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 26.5%;
+
+    @include font-r(18px, 1.2, #000000);
+
+    border: none;
+    background-color: transparent;
+
+    outline: none;
+
+    appearance: none;
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &::-ms-reveal {
+      display: none;
+    }
+
+    &::-webkit-credentials-auto-fill-button,
+    &::-webkit-caps-lock-indicator {
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+    }
+  }
+}

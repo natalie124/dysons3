@@ -1,0 +1,20 @@
+.product-info
+  .product-info__container
+    p.product-info__availability В наличии
+
+    .product-info__price
+      span.product-info__current-price <span>41 900</span> ₽
+      span.product-info__old-price 45 900
+
+    .product-info__advantages
+      p Доставка по Москве за 2 часа
+      p Доставка по России за 2-3 дня
+      p Гарантия 2 года
+
+    a.product-info__btn.product-info__btn--cart(href="cart.html")
+      +svg("cart", 26, 26)
+      | В корзину
+
+    button.product-info__btn.product-info__btn--buy.js-buy-click-btn(type="button")
+      +img-png( "cursor", 19, 21, "Купить в 1 клик" )
+      | Купить в 1 клик

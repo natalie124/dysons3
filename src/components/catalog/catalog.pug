@@ -1,0 +1,196 @@
+section.catalog.js-show-container
+  .container
+    .catalog__header
+      h1.catalog__title  Уход за волосами
+      .catalog__filters
+        form
+          .catalog__select
+            select(name="sort" id="sort")
+              option(value="popular") Популярные
+              option(value="pnovelties") Новинки
+              option(value="expensive") Самые дорогие
+              option(value="cheap") Самые дешевые
+            label.visually-hidden(for="sort") Сортировать
+
+    ul.cards
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-1", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Фен Dyson Supersonic для волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 35 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-2", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Стайлер Dyson Airwrap для разных типов длинных волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 25 750 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-3", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Очиститель Dyson Pure Hot+Cool
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 45 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-3", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Фен Dyson Supersonic для волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 35 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-2", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Стайлер Dyson Airwrap для разных типов длинных волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 25 750 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-1", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Очиститель Dyson Pure Hot+Cool
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 45 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-1", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Фен Dyson Supersonic для волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 35 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-2", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Стайлер Dyson Airwrap для разных типов длинных волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 25 750 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-3", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Очиститель Dyson Pure Hot+Cool
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 45 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item.js-hidden(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-1", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Фен Dyson Supersonic для волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 35 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item.js-hidden(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-2", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Стайлер Dyson Airwrap для разных типов длинных волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 25 750 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item.js-hidden(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-3", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Очиститель Dyson Pure Hot+Cool
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 45 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item.js-hidden(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-1", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Фен Dyson Supersonic для волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 35 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item.js-hidden(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-2", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Стайлер Dyson Airwrap для разных типов длинных волос
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 25 750 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+      li.cards__item.js-show-item.js-hidden(tabindex="0")
+        .cards__content
+          a.cards__img(href="#")
+            +picture-png-webp("card-3", 350, 330, "Фен Dyson Supersonic для волос")
+          .cards__info
+            a.cards__title(href="#") Очиститель Dyson Pure Hot+Cool
+            .cards__price
+              .cards__price-container
+                span.cards__current-price 45 500 <span>₽</span>
+              button.cards__cart.js-card-cart(type="button") В корзину
+                +svg("cart", 26, 26)
+
+    .catalog__show
+      button.js-show-btn(type="button" data-text="Скрыть" data-visible="9") Показать еще <span class="js-show-all"></span>

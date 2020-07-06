@@ -1,0 +1,174 @@
+.banners {
+  position: relative;
+
+  background-color: $black;
+
+  &__wrapper {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 0 15px 30px;
+
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    box-shadow: 0 0 80px $grey-1;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__column {
+    width: calc(50% - 1.5px);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+
+    width: 100%;
+    padding-bottom: 100%;
+
+    background-color: $black;
+
+    @media (max-width: $mobile) {
+      padding-bottom: 50%;
+      margin-bottom: 3px;
+    }
+
+    &--small {
+      padding-bottom: calc(50% - 1.5px);
+      margin-bottom: 3px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: $mobile) {
+        padding-bottom: 50%;
+        margin-bottom: 3px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      img {
+        opacity: 0.3;
+      }
+
+      p {
+        color: $white;
+        animation: linear 1.2s light infinite;
+        animation-delay: 0.2s;
+      }
+    }
+
+    &:active {
+      img {
+        opacity: 0.5;
+      }
+
+      p {
+        animation: none;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    background-color: transparent;
+
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+
+    overflow: hidden;
+
+    @media (max-width: $tablet) {
+      padding: 25px;
+    }
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+    padding: 0;
+
+    @include font-sb(40px, 1.2, $black-4);
+
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    animation: none;
+
+    @media (max-width: $tablet) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 22px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 135px;
+
+    background-color: $white-6;
+    content: "";
+
+    @media (max-width: $mobile) {
+      height: 50px;
+    }
+  }
+}
