@@ -80,18 +80,12 @@
 
       p {
         color: $white;
-        animation: linear 1.2s light infinite;
-        animation-delay: 0.2s;
       }
     }
 
     &:active {
       img {
         opacity: 0.5;
-      }
-
-      p {
-        animation: none;
       }
     }
   }

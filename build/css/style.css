@@ -65,36 +65,6 @@ button:-moz-focusring {
   src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/montserrat-v14-latin_cyrillic-ext-700.woff2") format("woff2"), url("../fonts/montserrat-v14-latin_cyrillic-ext-700.woff") format("woff");
 }
 
-@-webkit-keyframes light {
-  0% {
-    color: #dddddd;
-    text-shadow: 0px -1px 0px #000000;
-  }
-  50% {
-    color: #ffffff;
-    text-shadow: 0px -1px 0px #444444, 0px 0px 5px #ffdffd, 0px 0px 8px #ffffff;
-  }
-  100% {
-    color: #dddddd;
-    text-shadow: 0px -1px 0px #000000;
-  }
-}
-
-@keyframes light {
-  0% {
-    color: #dddddd;
-    text-shadow: 0px -1px 0px #000000;
-  }
-  50% {
-    color: #ffffff;
-    text-shadow: 0px -1px 0px #444444, 0px 0px 5px #ffdffd, 0px 0px 8px #ffffff;
-  }
-  100% {
-    color: #dddddd;
-    text-shadow: 0px -1px 0px #000000;
-  }
-}
-
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
@@ -2437,19 +2407,10 @@ footer {
 
 .banners__link:hover p, .banners__link:focus p {
   color: #ffffff;
-  -webkit-animation: linear 1.2s light infinite;
-          animation: linear 1.2s light infinite;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
 }
 
 .banners__link:active img {
   opacity: 0.5;
-}
-
-.banners__link:active p {
-  -webkit-animation: none;
-          animation: none;
 }
 
 .banners__content {
@@ -3238,18 +3199,15 @@ footer {
   border: none;
   border-radius: 2px;
   background-color: #191919;
-  -webkit-animation: none;
-          animation: none;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
+  -webkit-transition-property: opacity, background-color;
+  transition-property: opacity, background-color;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   cursor: pointer;
 }
 
 .catalog__show button:hover, .catalog__show button:focus {
-  -webkit-animation: linear 1.2s light infinite;
-          animation: linear 1.2s light infinite;
+  background-color: #421133;
 }
 
 .catalog__show button:active {

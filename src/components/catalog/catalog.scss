@@ -118,16 +118,14 @@
       border-radius: 2px;
       background-color: #191919;
 
-      animation: none;
-
-      transition-property: opacity;
+      transition-property: opacity, background-color;
       transition-duration: 0.3s;
 
       cursor: pointer;
 
       &:hover,
       &:focus {
-        animation: linear 1.2s light infinite;
+        background-color: $violet;
       }
 
       &:active {
